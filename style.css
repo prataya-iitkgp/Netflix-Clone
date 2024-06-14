@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+/*KANIT font*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --border-width-set: 5px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(51, 51, 51);
+    background-color: rgb(181, 236, 0);
+    font-family: sans-serif;
+    color: white;
+}
+
+.mass-container1 {
+    /* height: 120vh; */
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/dd4dfce3-1a39-4b1a-8e19-b7242da17e68/86742114-c001-4800-a127-c9c89ca7bbe4/IN-en-20240527-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-repeat: no-repeat;
+}
+
+.mass-color-grading1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.794), rgba(0, 0, 0, 0.574), rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.574), rgba(0, 0, 0, 0.794));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.topbar {
+    background-color: rgb(0, 0, 0, 0);
+    width: 75%;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.netflix-logo {
+    color: rgb(227, 0, 0);
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.8rem;
+    font-stretch: extra-expanded;
+}
+
+.topbar-rightside {
+    height: 100%;
+    display: flex;
+    gap: 26px;
+    /* border: 1px solid rgb(148, 148, 148); */
+}
+
+.lang-dropdown {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.481);
+    border: 1px solid rgb(148, 148, 148);
+    margin-block: 18px;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+    height: 33px;
+}
+
+.lang-dropdown:hover {
+    visibility: visible;
+}
+
+.subclass-lang-dropdown {
+    display: flex;
+    align-items: center
+}
+
+.subclass-lang-dropdown p {
+    display: inline;
+    margin-inline-start: 7px;
+    margin-inline-end: 5px;
+}
+
+.signin-button {
+    height: 48%;
+    background-color: rgb(243, 26, 26);
+    align-self: center;
+    border: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: center;
+    width: 74px;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: rgb(214, 0, 0);
+        cursor: pointer;
+        transition-duration: 250ms;
+    }
+}
+.content1-of-mass-container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    /* border: 1px solid red; */
+    padding-bottom: 190px;
+}
+.content1-of-mass-container1 #second{
+    padding-bottom: 9px;
+}
+.content1-of-mass-container1 h2{
+    box-sizing: border-box;
+    font-size: 42px;
+    font-weight: 900;
+}
+.content1-of-mass-container1 p{
+    font-size: 23px;
+    &:nth-child(3){
+        font-size: 18px;
+        font-stretch: extra-expanded;
+    }
+}
+.emailid-taker{
+    display: flex;
+    align-items:flex-start;
+    /* border: 2px solid green; */
+    margin-bottom: 5px;
+    gap: 10px;
+}
+/* .placeholder-outer-border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--border-width-set) solid white;
+    padding: 2px 1.5px;
+    border-radius: 4px;
+    &:focus{
+        border:none;
+    }
+} */
+.placeholder-box{
+    display: flex;
+    justify-content: flex-end;
+    height: 49px;
+    width: 385px;
+    border: 0.5px solid rgb(148, 148, 148);
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.608);
+}
+.placeholder-box input{
+    /* display: flex;
+    align-items: flex-end; */
+    width:90%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 2px;
+}
+.placeholder-box input::placeholder{
+    color: rgb(175, 175, 175);
+    font-size: 15px;
+    /* padding-left: 15px; */
+}
+#email-input:focus{
+    outline: none;
+    /* outline-width: 1px;
+    outline-color: white; */
+    color: white;
+}
+.get-started-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 199px;
+    height: 50px;
+    background-color: rgb(243, 26, 26);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    &:hover{
+        background-color: rgb(214, 0, 0);;
+        cursor: pointer;
+        transition-duration: 250ms;
+    }
+    & div{
+        display: inline-block;
+    }
+}
