@@ -86,7 +86,7 @@ body {
 }
 
 .signin-button {
-    height: 48%;
+    height: 33px;
     background-color: rgb(243, 26, 26);
     align-self: center;
     border: none;
