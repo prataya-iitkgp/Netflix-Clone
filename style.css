@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(51, 51, 51);
-    background-color: rgb(181, 236, 0);
+    /* background-color: rgb(181, 236, 0); */
     font-family: sans-serif;
     color: white;
 }
@@ -34,7 +34,7 @@ body {
 
 .topbar {
     background-color: rgb(0, 0, 0, 0);
-    width: 75%;
+    width: 85%;
     /* border: 1px solid white; */
     display: flex;
     justify-content: space-between;
@@ -46,7 +46,7 @@ body {
     font-family: "Kanit", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-stretch: extra-expanded;
 }
 
@@ -94,7 +94,7 @@ body {
     font-family: sans-serif;
     font-weight: 600;
     text-align: center;
-    width: 74px;
+    width: 100px;
     border-radius: 4px;
 
     &:hover {
@@ -109,7 +109,8 @@ body {
     align-items: center;
     gap: 14px;
     /* border: 1px solid red; */
-    padding-bottom: 190px;
+    padding-bottom: clamp(90px, 20vw, 190px);
+    width: clamp(300px, 900px, 90vw);
 }
 .content1-of-mass-container1 #second{
     padding-bottom: 9px;
@@ -118,9 +119,13 @@ body {
     box-sizing: border-box;
     font-size: 42px;
     font-weight: 900;
+    display: block;
+    text-align: center;
 }
 .content1-of-mass-container1 p{
     font-size: 23px;
+    display: block;
+    text-align: center;
     &:nth-child(3){
         font-size: 18px;
         font-stretch: extra-expanded;
@@ -130,20 +135,10 @@ body {
     display: flex;
     align-items:flex-start;
     /* border: 2px solid green; */
+    max-width: 90%;
     margin-bottom: 5px;
     gap: 10px;
 }
-/* .placeholder-outer-border{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: var(--border-width-set) solid white;
-    padding: 2px 1.5px;
-    border-radius: 4px;
-    &:focus{
-        border:none;
-    }
-} */
 .placeholder-box{
     display: flex;
     justify-content: flex-end;
@@ -178,13 +173,13 @@ body {
     align-items: center;
     justify-content: center;
     gap: 7px;
-    width: 199px;
+    width: clamp(170px, 40%, 200px);
     height: 50px;
     background-color: rgb(243, 26, 26);
     border: none;
     border-radius: 5px;
     color: white;
-    font-size: x-large;
+    font-size: 1.3em;
     font-weight: bold;
     &:hover{
         background-color: rgb(214, 0, 0);;
@@ -194,4 +189,197 @@ body {
     & div{
         display: inline-block;
     }
+}
+.mass-container2{
+    padding-inline: 5vw;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    background-color: black;
+}
+
+/* @media screen and (max-width: 960px) {
+    .mass-container2 {
+        flex-direction: column;
+        padding-top: 40px;
+        }
+        .text-portion h2 {
+            font-size: 30px;
+            text-align: center;
+            }
+            .text-portion p {
+                font-size: 20px;
+        min-height: 100px;
+        }
+        .mass-container2 .media2 {
+            margin-bottom: 20px;
+    }
+    } */
+    
+.text-portion h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+}
+.text-portion p{
+    font-size: 24px;
+    padding-top: 20px;
+    padding-left: 6px;
+    text-align: center;
+    /* text-align: center; */
+}
+.mass-container2 .text-portion{
+    display: inline;
+    /* border: 2px solid white; */
+}
+.mass-container2 .media2{
+    /* border: 1px solid white; */
+    position: relative;
+    width: auto;
+    /* z-index: 8; */
+}
+.mass-container2 .media2 .media2-imageframe{
+    width: 450px;
+    object-fit: contain;
+    position: relative;
+    max-width: 100%;
+    z-index: 19;
+}
+.mass-container2 .media2 video{
+    position: absolute;
+    top: 73px;
+    left: 63px;
+    width: 322px;
+    /* z-index: 1; */
+    
+}
+/* .mass-container2 .media2 video:: */
+.mass-container2 .media2 img{
+    /* border: 2px solid white; */
+    width: 450px;
+    /* align-self: center; */
+}
+
+@media screen and (min-width:960px){
+    .text-portion{
+        width: 500px;
+    }
+}
+@media screen and (max-width:960px){
+    .content1-of-mass-container1 h2{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .content1-of-mass-container1 p{
+        font-size: 20px;
+        &:nth-child(3){
+            font-size: 19px;
+            font-stretch: extra-expanded;
+        }
+    }
+    .mass-container2{
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .text-portion h2{
+        margin-top: 45px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .text-portion p{
+        font-size: 20px;
+        min-height: 100px;
+    }
+    .text-portion{
+        width: auto;
+    }
+    .mass-container2 .media2{
+        margin-bottom: 30px;
+    }
+    
+}
+@media screen and (max-width: 600px){
+    .emailid-taker {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .content1-of-mass-container1 h2{
+        font-size: clamp(130%,2rem,4vw);
+    }
+    .content1-of-mass-container1 p {
+        font-size: 18px;
+        &:nth-child(3) {
+            font-size: 15px;
+        }
+    }
+    .placeholder-box {
+        width: 80vw;
+    }
+    .topbar{
+        width: 95%;
+        padding-inline: 10px;
+    }
+
+    .netflix-logo {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    
+    .topbar-rightside {
+        gap: 10pxpx;
+    }
+    
+    .lang-dropdown {
+        margin-block: 12px;
+        padding-left: 5px;
+        padding-right: 0px;
+        height: 26px;
+    }
+    .lang-dropdown:hover {
+        visibility: visible;
+    }
+    
+    .subclass-lang-dropdown {
+        display: flex;
+        align-items: center
+    }
+    
+    .subclass-lang-dropdown p {
+        display: inline;
+        margin-inline-start: 7px;
+        margin-inline-end: 5px;
+    }
+    
+    .signin-button {
+        width: 70px;
+        border-radius: 4px;
+        height: 28px;
+    }
+    .mass-container2 .media2 video {
+        position: absolute;
+        top: 10.4vw;
+        left: 9vw;
+        width: 48.4vw;
+        z-index: 0;
+    }
+    .mass-container2 .media2 img {
+        width: 67vw;
+    }
+    .mass-container2 .media2{
+        max-width: 70vw;
+        /* border: 1px solid white; */
+    }
+    .text-portion h2 {
+       font-size: 1.6rem;
+    }
+    .text-portion p {
+        font-size: 1rem;
+    }
+
+    
 }
